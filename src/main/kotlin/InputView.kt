@@ -1,7 +1,4 @@
 import domain.MoveStrategy
-import java.util.*
-
-private val scanner = Scanner(System.`in`)
 
 fun getUserInputNames(): List<String> {
     println(
@@ -12,9 +9,7 @@ fun getUserInputNames(): List<String> {
     """.trimIndent()
     )
 
-    val scanner = Scanner(System.`in`)
-
-    val userInputNames = scanner.nextLine()
+    val userInputNames = readLine() ?: throw IllegalArgumentException("값을 입력해주세요.")
     return userInputNames.split(",").toList()
 }
 
@@ -23,10 +18,10 @@ fun getUserInputMoveStrategy(): String {
     MoveStrategy.values()
         .forEach { value -> println("""전략 이름 : ${value.name} 전략 설명 : ${value.description}""") }
 
-    return scanner.nextLine();
+    return readLine() ?: throw IllegalArgumentException("값을 입력해주세요.")
 }
 
 fun getUserInputPlayCount(): Int {
     println("몇 경기를 할지 입력해주세요. 숫자로만 입력해주세요.")
-    return scanner.nextInt()
+    return readLine()?.toInt() ?: throw IllegalArgumentException("값을 입력해주세요.")
 }
