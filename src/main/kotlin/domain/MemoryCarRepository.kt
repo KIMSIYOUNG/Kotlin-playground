@@ -13,7 +13,7 @@ class MemoryCarRepository : CarRepository {
 
         car.reflectValue(mapOf("id" to uuid))
 
-        return car.id
+        return car.id!!
     }
 
     override fun saveAll(cars: Iterable<Car>): List<String> {
@@ -34,7 +34,7 @@ class MemoryCarRepository : CarRepository {
         val findCar = cars[id] ?: throw IllegalArgumentException("해당하는 ID를 가진 자동차가 없습니다, $id")
 
         val newCar = Car(findCar.name).apply {
-            reflectValue(mapOf("id" to findCar.id, "position" to position))
+            reflectValue(mapOf("id" to findCar.id!!, "position" to position))
         }
 
         cars[id] = newCar

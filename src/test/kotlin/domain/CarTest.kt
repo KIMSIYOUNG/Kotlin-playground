@@ -2,7 +2,8 @@ package domain
 
 import domain.MoveStrategy.ALWAYS_GO
 import domain.MoveStrategy.STAND_STILL
-import org.assertj.core.api.Assertions.*
+import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.tuple
 import org.junit.jupiter.api.Test
 
 @Suppress("NonAsciiCharacters")
@@ -15,8 +16,7 @@ internal class CarTest {
 
         /* when, then */
         assertThat(car.position).isEqualTo(0)
-        assertThatThrownBy { car.id }
-            .isInstanceOf(UninitializedPropertyAccessException::class.java)
+        assertThat(car.id).isNull()
     }
 
     @Test

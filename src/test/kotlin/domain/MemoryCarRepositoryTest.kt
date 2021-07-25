@@ -8,7 +8,7 @@ internal class MemoryCarRepositoryTest {
     private val carRepository: CarRepository = MemoryCarRepository()
 
     @Test
-    internal fun `정상적으로 자동차의 값이 저장되고, 저장된 아이디를 반환한다`() {
+    fun `정상적으로 자동차의 값이 저장되고, 저장된 아이디를 반환한다`() {
         /* given */
         val car = Car("시영")
         val id = carRepository.save(car)
@@ -25,14 +25,14 @@ internal class MemoryCarRepositoryTest {
     }
 
     @Test
-    internal fun `해당하는 자동차가 없는 경우 예외를 반환한다`() {
+    fun `해당하는 자동차가 없는 경우 예외를 반환한다`() {
         /* when, then */
         assertThatThrownBy { carRepository.update("NOT_EXIST_ID", 0) }
             .isInstanceOf(IllegalArgumentException::class.java)
     }
 
     @Test
-    internal fun `자동차의 위치 상태값을 수정한다`() {
+    fun `자동차의 위치 상태값을 수정한다`() {
         /* given */
         val car = Car("시영")
         val id = carRepository.save(car)
@@ -49,7 +49,7 @@ internal class MemoryCarRepositoryTest {
     }
 
     @Test
-    internal fun `아이디를 통해 자동차들을 조회할 수 있다`() {
+    fun `아이디를 통해 자동차들을 조회할 수 있다`() {
         /* given */
         val ids = carRepository.saveAll(
             listOf(

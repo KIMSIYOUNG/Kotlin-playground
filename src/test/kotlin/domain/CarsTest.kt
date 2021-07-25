@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 internal class CarsTest {
 
     @Test
-    internal fun `차가 없는 경우에 빈 값을 반환하고 경기를 정상적으로 진행한다`() {
+    fun `차가 없는 경우에 빈 값을 반환하고 경기를 정상적으로 진행한다`() {
         /* given */
         val userNames = emptyList<String>()
 
@@ -27,7 +27,7 @@ internal class CarsTest {
     }
 
     @Test
-    internal fun `이름이 담긴 리스트를 통해 자동차를 생성할 수 있다`() {
+    fun `이름이 담긴 리스트를 통해 자동차를 생성할 수 있다`() {
         /* given */
         val userNames = listOf("시영", "범준", "운장")
 
@@ -41,7 +41,7 @@ internal class CarsTest {
     }
 
     @Test
-    internal fun `입력한 경기수만큼 이동 전략에 따라 각 자동차를 이동시킨다`() {
+    fun `입력한 경기수만큼 이동 전략에 따라 각 자동차를 이동시킨다`() {
         /* given */
         val cars = Cars.create(listOf("시영", "범준", "운장"))
 
@@ -60,7 +60,7 @@ internal class CarsTest {
     }
 
     @Test
-    internal fun `매 라운드별 결과는 스냅샷으로 관리되고 확인할 수 있다`() {
+    fun `매 라운드별 결과는 스냅샷으로 관리되고 확인할 수 있다`() {
         /* given */
         val cars = Cars.create(listOf("시영", "범준", "운장"))
 
@@ -81,7 +81,7 @@ internal class CarsTest {
     }
 
     @Test
-    internal fun `가장 멀리간 차와 위치가 동일한 사람이 복수라면 모두가 승자가 된다`() {
+    fun `가장 멀리간 차와 위치가 동일한 사람이 복수라면 모두가 승자가 된다`() {
         /* given */
         val cars = Cars.create(listOf("시영", "범준", "운장"))
         cars.move(10, ALWAYS_GO)
@@ -96,7 +96,7 @@ internal class CarsTest {
     }
 
     @Test
-    internal fun `위치를 통해 승자를 찾을 수 있다`() {
+    fun `위치를 통해 승자를 찾을 수 있다`() {
         /* given */
         val car1 = Car("시영")
         val car2 = Car("운장")

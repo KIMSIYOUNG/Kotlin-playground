@@ -1,7 +1,7 @@
 package domain
 
 class Car(val name: String) {
-    lateinit var id: String
+    var id: String? = null
         private set
     var position = 0
         private set
