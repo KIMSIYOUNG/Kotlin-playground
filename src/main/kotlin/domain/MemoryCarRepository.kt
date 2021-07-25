@@ -32,9 +32,10 @@ class MemoryCarRepository : CarRepository {
 
     override fun update(id: String, position: Int) {
         val findCar = cars[id] ?: throw IllegalArgumentException("해당하는 ID를 가진 자동차가 없습니다, $id")
-        val newCar = Car(findCar.name)
 
-        newCar.reflectValue(mapOf("id" to findCar.id, "position" to position))
+        val newCar = Car(findCar.name).apply {
+            reflectValue(mapOf("id" to findCar.id, "position" to position))
+        }
 
         cars[id] = newCar
     }

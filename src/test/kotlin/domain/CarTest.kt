@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 internal class CarTest {
 
     @Test
-    internal fun `자동차의 생성위치는 0으로 고정되고, 아이디는 존재하지 않는다(디비에 저장될 때 생성된다)`() {
+    fun `자동차의 생성위치는 0으로 고정되고, 아이디는 존재하지 않는다(디비에 저장될 때 생성된다)`() {
         /* given */
         val car = Car("시영")
 
@@ -19,7 +19,7 @@ internal class CarTest {
     }
 
     @Test
-    internal fun `5이상의 값이 나오는 전략은 항상 자동차가 움직인다`() {
+    fun `5이상의 값이 나오는 전략은 항상 자동차가 움직인다`() {
         /* given */
         val car = Car("시영")
 
@@ -31,7 +31,7 @@ internal class CarTest {
     }
 
     @Test
-    internal fun `4이하의 값이 나오는 전략은 항상 자동차가 움직이지 않는다`() {
+    fun `4이하의 값이 나오는 전략은 항상 자동차가 움직이지 않는다`() {
         /* given */
         val car = Car("시영")
 
@@ -43,7 +43,7 @@ internal class CarTest {
     }
 
     @Test
-    internal fun `차가 움직이는 것과 관계없이 항상 매 라운드의 기록이 저장된다`() {
+    fun `차가 움직이는 것과 관계없이 항상 매 라운드의 기록이 저장된다`() {
         /* given */
         val car = Car("시영")
 

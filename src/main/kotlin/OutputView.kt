@@ -19,8 +19,6 @@ fun printWinners(winners: List<Car>) {
 
 private fun Int.spread(type: String): String {
     val builder = StringBuilder()
-    repeat((0 until (this)).count()) {
-        builder.append(type)
-    }
+    repeat((this)) { builder.append(type) }
     return builder.toString()
 }

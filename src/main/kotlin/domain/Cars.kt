@@ -9,7 +9,7 @@ class Cars(val cars: List<Car>) {
     }
 
     fun move(raceCount: Int, moveStrategy: MoveStrategy) {
-        repeat((0 until raceCount).count()) { round -> moveEachCars(round, moveStrategy) }
+        repeat(raceCount) { moveEachCars(it, moveStrategy) }
     }
 
     fun findWinners(): List<Car> {

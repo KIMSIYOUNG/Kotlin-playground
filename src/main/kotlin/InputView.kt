@@ -15,8 +15,7 @@ fun getUserInputNames(): List<String> {
 
 fun getUserInputMoveStrategy(): String {
     println("자동차가 움직이는 전략을 결정할 수 있습니다. 전략과 설명은 아래와 같습니다.")
-    MoveStrategy.values()
-        .forEach { value -> println("""전략 이름 : ${value.name} 전략 설명 : ${value.description}""") }
+    MoveStrategy.values().forEach { println("""전략 이름 : ${it.name} 전략 설명 : ${it.description}""") }
 
     return readLine() ?: throw IllegalArgumentException("값을 입력해주세요.")
 }
