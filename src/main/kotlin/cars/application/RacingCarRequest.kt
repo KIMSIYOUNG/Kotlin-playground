@@ -1,8 +1,7 @@
-package application
+package cars.application
 
-import domain.Car
-import domain.Cars
-import domain.MoveStrategy
+import cars.domain.Cars
+import cars.domain.MoveStrategy
 
 class RacingCarRequest(cars: List<String>, moveStrategy: String, val round: Int) {
     val cars: Cars = Cars.create(cars)

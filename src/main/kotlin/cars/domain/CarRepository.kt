@@ -1,4 +1,4 @@
-package domain
+package cars.domain
 
 interface CarRepository {
 

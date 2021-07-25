@@ -1,6 +1,6 @@
-import application.RacingCarService
-import domain.MemoryCarRepository
-import presentation.RacingCarRequestDto
+import cars.application.RacingCarService
+import cars.domain.MemoryCarRepository
+import cars.presentation.RacingCarRequestDto
 
 private val racingCarService: RacingCarService = RacingCarService(MemoryCarRepository())
 

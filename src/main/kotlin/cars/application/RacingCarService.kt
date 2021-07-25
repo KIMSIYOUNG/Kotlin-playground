@@ -1,6 +1,9 @@
-package application
+package cars.application
 
-import domain.*
+import cars.domain.Car
+import cars.domain.CarMoveSnapshot
+import cars.domain.CarRepository
+import cars.domain.Cars
 
 class RacingCarService(private val carRepository: CarRepository) {
 

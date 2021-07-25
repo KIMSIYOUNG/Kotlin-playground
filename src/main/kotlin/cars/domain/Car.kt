@@ -1,4 +1,4 @@
-package domain
+package cars.domain
 
 class Car(val name: String) {
     var id: String? = null

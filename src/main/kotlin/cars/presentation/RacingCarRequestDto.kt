@@ -1,6 +1,6 @@
-package presentation
+package cars.presentation
 
-import application.RacingCarRequest
+import cars.application.RacingCarRequest
 
 class RacingCarRequestDto(
     private val names: List<String>,

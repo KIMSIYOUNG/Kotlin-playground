@@ -1,6 +1,5 @@
-import domain.Car
-import domain.CarMoveSnapshot
-import java.lang.StringBuilder
+import cars.domain.Car
+import cars.domain.CarMoveSnapshot
 
 fun printSnapShots(snapshots: Map<Int, List<CarMoveSnapshot>>) {
     println("===============라운드별 경기 결과=================")

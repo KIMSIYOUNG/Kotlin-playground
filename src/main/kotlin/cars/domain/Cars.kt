@@ -1,4 +1,4 @@
-package domain
+package cars.domain
 
 class Cars(val cars: List<Car>) {
 

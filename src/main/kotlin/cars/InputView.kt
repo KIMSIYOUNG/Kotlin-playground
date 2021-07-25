@@ -1,4 +1,4 @@
-import domain.MoveStrategy
+import cars.domain.MoveStrategy
 
 fun getUserInputNames(): List<String> {
     println(

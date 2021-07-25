@@ -1,7 +1,7 @@
-package domain
+package cars.domain
 
-import domain.MoveStrategy.ALWAYS_GO
-import domain.MoveStrategy.STAND_STILL
+import cars.domain.MoveStrategy.ALWAYS_GO
+import cars.domain.MoveStrategy.STAND_STILL
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.tuple
 import org.junit.jupiter.api.Test

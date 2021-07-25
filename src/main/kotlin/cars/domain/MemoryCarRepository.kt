@@ -1,4 +1,4 @@
-package domain
+package cars.domain
 
 import java.util.*
 import kotlin.reflect.KMutableProperty
