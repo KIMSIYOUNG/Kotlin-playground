@@ -3,6 +3,7 @@ package domain
 import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.Test
 
+@Suppress("NonAsciiCharacters")
 internal class MemoryCarRepositoryTest {
     private val carRepository: CarRepository = MemoryCarRepository()
 

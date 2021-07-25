@@ -6,6 +6,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.tuple
 import org.junit.jupiter.api.Test
 
+@Suppress("NonAsciiCharacters")
 internal class CarsTest {
 
     @Test
