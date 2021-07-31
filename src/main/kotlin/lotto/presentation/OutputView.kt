@@ -1,8 +1,8 @@
 package lotto.presentation
 
+import lotto.domain.GameResult
 import lotto.domain.Lotto
 import lotto.domain.LottoNumber
-import lotto.domain.Lottos
 
 object OutputView {
     fun printWelcome() {
@@ -13,23 +13,22 @@ object OutputView {
         )
     }
 
-    fun printLottos(lottos: Lottos) {
+    fun printLottos(lottos: List<Lotto>) {
         println()
         println("구매한 티켓은 아래와 같습니다.")
         println("===================================")
 
-        val auto = lottos.lottos[Lottos.LottoType.AUTO] ?: listOf()
-        val manual = lottos.lottos[Lottos.LottoType.MANUAL] ?: listOf()
-
-        auto.forEachIndexed { index, lotto ->
-            println("자동 로또  ${index + 1}번째 티켓 번호: [${lotto.spread(", ")}]")
+        lottos.forEachIndexed { index, lotto ->
+            println("${index + 1}번째 티켓 번호: [${lotto.spread(", ")}]")
         }
+    }
 
-        println("===================================")
+    fun printResult(gameResult: GameResult) {
+        println("당첨 결과를 공개하겠습니다ㅋㄷㅋㄷ")
 
-        manual.forEachIndexed { index, lotto ->
-            println("수동 로또  ${index + 1}번째 티켓 번호: [${lotto.spread(", ")}]")
-        }
+        gameResult.results.forEach { (key, value) -> println("${key.description} : ${value}개")}
+
+        println("수익률은 ${gameResult.profit}입니다. 또 이용해지건")
     }
 }
 

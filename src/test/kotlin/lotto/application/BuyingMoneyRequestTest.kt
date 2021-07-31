@@ -2,8 +2,7 @@ package lotto.application
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
-import io.kotest.matchers.shouldBe
-import lotto.domain.Money
+import lotto.application.dto.BuyingMoneyRequest
 
 class BuyingMoneyRequestTest : DescribeSpec({
     describe("생성") {

@@ -1,6 +1,6 @@
-package lotto.application
+package lotto.application.dto
 
-class LottoCreateRequest(val amount: Int, val manualCount: Int, val manualLottoNumbers: List<String>) {
+class LottoCreateRequest(private val amount: Int, private val manualCount: Int, val manualLottoNumbers: List<String>) {
     val autoLottoCount: Int
         get() {
             return (amount / 1000) - manualCount
